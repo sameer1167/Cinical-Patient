@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paitent detail</title>
+</head>
+<body>
+    <h2><a href="/">Home</a></h2>
+    <ol>
+     <h1>Paitent details</h1>
+
+     <h3><li>First Name : {{paitent.firstname}}</li></h3>
+     <h3><li>Last Name : {{paitent.lastname}}</li></h3>
+     <h3><li>Test Score : {{paitent.age}}</li></h3>
+     <h3><li><a href="/update/{{paitent.id}}">Update</a></li></h3>
+     <h3><li><a href="/delete/{{paitent.id}}">Delete</a></li></h3>
+     <h3><li><a href="/addData/{{paitent.id}}">Add Data</a></li></h3>
+     <h3><li><a href="/analyse/{{paitent.id}}">Analyse Paitent Data</a></li></h3>
+     
+     </ol>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clinical Data Report</h1>
+    <table border="2">
+        <thead>
+            <th>Component Name</th>
+            <th>Component value</th>
+            <th>Measure Date Time</th>
+        </thead>
+        {%for eachEntery in data%}
+        <tr>
+            <td>{{eachEntery.componentname}}</td>
+            <td>{{eachEntery.componentvalue}}</td>
+            <td>{{eachEntery.measuredatetime}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
