@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Paitentt</title>
+    <link rel="stylesheet" href="/static/css/clinicals_list.css">
 </head>
 <body>
-    <h2>Delete Paitent {{paitent.firstname}} ? </h2>
+    <h1>Delete Paitent {{paitent.firstname}} ? </h1>
     <form method="post">
-        <input type="submit" value="confirm">
-        <a href="/{{paitent.id}}">Cancle</a>
+        <input class="submit" type="submit" value="confirm">
+        <a class="cancel" href="/{{paitent.id}}">Cancel</a>
         {% csrf_token %}
     </form>
     

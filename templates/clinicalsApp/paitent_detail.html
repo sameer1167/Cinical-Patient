@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paitent detail</title>
+    <link rel="stylesheet" href="/static/css/clinicals_list.css">
 </head>
 <body>
-    <h2><a href="/">Home</a></h2>
+    <h2><a class="buttons" href="/">Home</a></h2>
     <ol>
      <h1>Paitent details</h1>
 
      <h3><li>First Name : {{paitent.firstname}}</li></h3>
      <h3><li>Last Name : {{paitent.lastname}}</li></h3>
      <h3><li>Test Score : {{paitent.age}}</li></h3>
-     <h3><li><a href="/update/{{paitent.id}}">Update</a></li></h3>
-     <h3><li><a href="/delete/{{paitent.id}}">Delete</a></li></h3>
-     <h3><li><a href="/addData/{{paitent.id}}">Add Data</a></li></h3>
-     <h3><li><a href="/analyse/{{paitent.id}}">Analyse Paitent Data</a></li></h3>
+     <h3><li><a class="buttons" href="/update/{{paitent.id}}">Update</a></li></h3>
+     <h3><li><a class="buttons" href="/delete/{{paitent.id}}">Delete</a></li></h3>
+     <h3><li><a class="buttons" href="/addData/{{paitent.id}}">Add Data</a></li></h3>
+     <h3><li><a class="buttons" href="/analyse/{{paitent.id}}">Analyse Paitent Data</a></li></h3>
      
      </ol>
 </body>
