@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/clinicals_list.css">
+    <title>Patient detail</title>
 </head>
 <body>
-    <h2>Paitent Detail</h2>
-    First Name : {{paitent.firstname}}
+    <h1>Paitent Detail</h1>
+    <hr>
 
-    Last Name : {{paitent.lastname}}
+    <span id="firstname">First Name : {{paitent.firstname}}</span>
+    <input id="firstname" type="text" placeholder="{{paitent.firstname}}">
+    <br>
+    <br>
+
+    <span id="lastname"> Last Name : {{paitent.lastname}}</span>
+    <input id="lastname" type="text" placeholder="{{paitent.lastname}}">
+    <br>
+    <br>
     
-    Age : {{paitent.age}}
-    <h2>Paitent Clinical Data</h2>
+
+    
+    <span id="age"> Age : {{paitent.age}}</span>
+    <input id="age" type="number" placeholder="{{paitent.age}}">
+    <hr>
+    <h1>Paitent Clinical Data</h1>
     <form method="post">
-        <table>
+        <table border="0">
             {{form.as_table}}
             {%csrf_token%}
         </table>
-        <input type="submit" value="save">
+        <input class="b" type="submit" value="save">
     </form>
 </body>
 </html>

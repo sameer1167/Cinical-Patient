@@ -4,32 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/clinicals_list.css' %}"/>
-    <title>Document</title>
+    <link rel="stylesheet" href= "{ static 'css/clinicals_list.css' % }"/>
+    <link rel="stylesheet" href="/static/css/clinicals_list.css">
+    <title>Patient List </title>
+    
 </head>
 <body>
-    <h1>Paitent</h1>
-    <table>
+    <h1>Patient list </h1>
+    <table border="1px solid red ">
         <thead>
             <th>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
         </thead>
+
         {%for paitent in paitent_list%}
+        
+
         <tr>
             <td><a href="/detail/{{paitent.id}}">{{paitent.id}}</a></td>
             <td>{{paitent.firstname}}</td>
             <td>{{paitent.lastname}}</td>
             <td>{{paitent.age}}</td>
-            <td><a href="/update/{{paitent.id}}">Update</a></td>
-            <td><a href="/delete/{{paitent.id}}">Delete</a></td>
-            <td><a href="/addData/{{paitent.id}}">Add Data</a></td>
-            <td><a href="/analyse/{{paitent.id}}">Analyse Data</a></td>
+        
+        
+            <td><a class="buttons"  href="/update/{{paitent.id}}">Update</a></td>
+            <td><a class="buttons" href="/delete/{{paitent.id}}">Delete</a></td>
+            <td><a class="buttons" href="/addData/{{paitent.id}}">Add Data</a></td>
+            <td><a class="buttons" href="/analyse/{{paitent.id}}">Analyse Data</a></td>
+        </tr>
+        <tr>
+            <td><a href="/detail/{{paitent.id}}">{{paitent.id}}</a></td>
+            <td>{{paitent.firstname}}</td>
+            <td>{{paitent.lastname}}</td>
+            <td>{{paitent.age}}</td>
+        
+        
+            <td><a class="buttons"  href="/update/{{paitent.id}}">Update</a></td>
+            <td><a class="buttons" href="/delete/{{paitent.id}}">Delete</a></td>
+            <td><a class="buttons" href="/addData/{{paitent.id}}">Add Data</a></td>
+            <td><a class="buttons" href="/analyse/{{paitent.id}}">Analyse Data</a></td>
+        </tr>
+        <tr>
+            <td><a href="/detail/{{paitent.id}}">{{paitent.id}}</a></td>
+            <td>{{paitent.firstname}}</td>
+            <td>{{paitent.lastname}}</td>
+            <td>{{paitent.age}}</td>
+        
+        
+            <td><a class="buttons"  href="/update/{{paitent.id}}">Update</a></td>
+            <td><a class="buttons" href="/delete/{{paitent.id}}">Delete</a></td>
+            <td><a class="buttons" href="/addData/{{paitent.id}}">Add Data</a></td>
+            <td><a class="buttons" href="/analyse/{{paitent.id}}">Analyse Data</a></td>
+        </tr>
+        <tr>
+            <td><a href="/detail/{{paitent.id}}">{{paitent.id}}</a></td>
+            <td>{{paitent.firstname}}</td>
+            <td>{{paitent.lastname}}</td>
+            <td>{{paitent.age}}</td>
+        
+        
+            <td><a class="buttons"  href="/update/{{paitent.id}}">Update</a></td>
+            <td><a class="buttons" href="/delete/{{paitent.id}}">Delete</a></td>
+            <td><a class="buttons" href="/addData/{{paitent.id}}">Add Data</a></td>
+            <td><a class="buttons" href="/analyse/{{paitent.id}}">Analyse Data</a></td>
         </tr>
         {%endfor%}
     </table>
-    <br/>
-    <a href="create/">Add Paitent</a>
+   <div class="add">
+    <a  href="create/">Add Paitent</a>
+   </div>  
+    
 </body>
 </html>
